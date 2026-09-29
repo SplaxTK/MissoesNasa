@@ -14,7 +14,7 @@ A API disponibiliza operações para consultar, filtrar, cadastrar, atualizar e 
 
 ## Tecnologias Utilizadas
 
-- PHP 8 ou superior
+- PHP 8
 - Slim Framework 4
 - Slim PSR-7
 - Composer
@@ -58,7 +58,7 @@ Os exemplos abaixo consideram a URL base `http://localhost:8080` e os dados inic
 - **Objetivo:** verificar se a API esta funcionando.
 - **Requisicao:** `GET http://localhost:8080/status`
 - **Resposta:** `200 OK`
-
+- **Print:** !![alt text](img/image.png)
 ```json
 {"status":"ok"}
 ```
@@ -70,7 +70,7 @@ Os exemplos abaixo consideram a URL base `http://localhost:8080` e os dados inic
 - **Objetivo:** listar todas as missões. O parâmetro opcional `nome` filtra pelo nome, sem diferenciar maiúsculas de minúsculas.
 - **Requisicao:** `GET http://localhost:8080/missoes?nome=apollo`
 - **Resposta:** `200 OK`
-
+- **Print:** ![alt text](img/image2.png)
 ```json
 [
   {"id":1,"nome":"Apollo 11","ano":1969,"agencia":"NASA","status":"Concluída"},
@@ -86,6 +86,7 @@ Os exemplos abaixo consideram a URL base `http://localhost:8080` e os dados inic
 - **Objetivo:** consultar uma missão pelo seu identificador.
 - **Requisicao:** `GET http://localhost:8080/missoes/1`
 - **Resposta de sucesso:** `200 OK`
+- **Print:** ![alt text](img/image3.png)
 
 ```json
 {"id":1,"nome":"Apollo 11","ano":1969,"agencia":"NASA","status":"Concluída"}
@@ -104,6 +105,7 @@ Se o ID nao existir, a API retorna `404 Not Found`:
 - **Objetivo:** cadastrar uma missão informando seu nome.
 - **Cabeçalho:** `Content-Type: application/json`
 - **Requisição:** `POST http://localhost:8080/missoes`
+- **Print:** ![alt text](img/image4.png)
 
 ```json
 {"nome":"Artemis I"}
@@ -122,6 +124,7 @@ Se o ID nao existir, a API retorna `404 Not Found`:
 - **Objetivo:** atualizar o nome de uma missao.
 - **Cabeçalho:** `Content-Type: application/json`
 - **Requisição:** `PUT http://localhost:8080/missoes/1`
+- **Print:** ![alt text](img/image5.png)
 
 ```json
 {"nome":"Apollo 11 - atualizada"}
@@ -142,6 +145,7 @@ Se o ID não existir, a API retorna `404 Not Found`. **Pendência:** atualmente,
 - **Objetivo:** remover uma missão pelo seu identificador.
 - **Requisicao:** `DELETE http://localhost:8080/missoes/1`
 - **Resposta de sucesso:** `200 OK`
+- **Print:** ![alt text](img/image6.png)
 
 ```json
 {"mensagem":"Missão removida com sucesso"}
@@ -154,10 +158,6 @@ Se o ID nao existir, a API retorna `404 Not Found`:
 ```
 
 Todas as respostas dos endpoints são enviadas em JSON com o cabeçalho `Content-Type: application/json`.
-
-## Evidências dos Testes
-
-As capturas de tela dos testes no Postman ou Insomnia ainda precisam ser adicionadas ao repositório. Salve os arquivos em `docs/evidencias/` e insira-os aqui, por exemplo:
 
 ```markdown
 ![Teste GET de missoes no Postman](docs/evidencias/get-missoes.png)
