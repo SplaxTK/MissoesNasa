@@ -12,6 +12,10 @@ API REST para consulta e gerenciamento de missões espaciais, desenvolvida com P
 
 A API disponibiliza operações para consultar, filtrar, cadastrar, atualizar e remover missões espaciais. Os dados de exemplo ficam armazenados em memória durante a execução da aplicação; por isso, as alterações são perdidas quando o servidor é reiniciado.
 
+## Instala o test
+
+- composer require --dev phpunit/phpunit
+
 ## Tecnologias Utilizadas
 
 - PHP 8
